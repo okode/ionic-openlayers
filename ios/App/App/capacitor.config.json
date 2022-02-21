@@ -1,0 +1,6 @@
+{
+	"appId": "com.okode.olapp",
+	"appName": "olapp",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
