@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { Map, View } from 'ol';
 import TileLayer from 'ol/layer/Tile';
 import { fromLonLat } from 'ol/proj';
@@ -11,13 +10,11 @@ import { OSM } from 'ol/source';
   styleUrls: ['./folder.page.scss'],
 })
 export class FolderPage implements OnInit {
-  public folder: string;
 
-  constructor(private activatedRoute: ActivatedRoute) { }
+  private map: Map;
 
   ngOnInit() {
-    this.folder = this.activatedRoute.snapshot.paramMap.get('id');
-    new Map({
+    this.map = new Map({
       target: 'map',
       layers: [
         new TileLayer({
@@ -29,6 +26,7 @@ export class FolderPage implements OnInit {
         zoom: 4
       })
     });
+    setTimeout(() => { this.map.updateSize(); }, 50);
   }
 
 }
