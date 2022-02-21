@@ -14,8 +14,12 @@ npm i ol
 ```
 
 Add to `src/global.scss`:
-
 ```
 /* OpenLayers CSS */
 @import "~ol/ol.css";
+```
+
+Add to `tsconfig.json`:
+```
+"skipLibCheck": true
 ```
