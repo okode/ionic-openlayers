@@ -3,13 +3,22 @@
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
         <ion-list id="inbox-list">
-          <ion-list-header>OpenLayers</ion-list-header>
+          <ion-list-header>CSP - Widget Dársena</ion-list-header>
           <ion-note>okode.com</ion-note>
 
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
             <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
               <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
               <ion-label>{{ p.title }}</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>Geometría</ion-label>
+              <ion-select interface="popover">
+                <ion-select-option value="Point">Punto</ion-select-option>
+                <ion-select-option value="LineString">Línea</ion-select-option>
+                <ion-select-option value="Polygon">Polígono</ion-select-option>
+                <ion-select-option value="Circle">Círculo</ion-select-option>
+              </ion-select>
             </ion-item>
           </ion-menu-toggle>
         </ion-list>

@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'OpenLayers', url: '/folder/OpenLayers', icon: 'map' }
+    { title: 'Widget Dársena', url: '/folder/widget', icon: 'map' }
   ];
   constructor() {}
 }
